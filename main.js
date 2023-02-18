@@ -1,4 +1,4 @@
-//Первая задача
+ //Первая задача
 function first(){
     let kmspeed = prompt("Укажите скорость в км/ч")
     let mspeed2 = prompt("Укажите скорость в м/с")
