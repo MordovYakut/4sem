@@ -1,11 +1,11 @@
 //Первая задача
-function convertSpeed(){
-    let speed = prompt("Укажите значение скорости, которую вы хотите преобразовать")
+function convertSpeed(speed, convert){
+    // speed = prompt("Укажите значение скорости, которую вы хотите преобразовать")
     if (speed < 0){
         console.log("Error!")
     }
     else {
-        let convert = prompt("Укажите как преобразовать: toMS (в м/с) или toKMH (в км/с)")
+        // convert = prompt("Укажите как преобразовать: toMS (в м/с) или toKMH (в км/с)")
         let newspeed
         if (convert == "toMS"){
             newspeed = speed * 1000 / 3600
@@ -22,8 +22,8 @@ function convertSpeed(){
 }
 
 //Вторая задача
-function absValue(){
-    let number = +prompt("Введите число, значение модуля которого вы хотите узнать")
+function absValue(number){
+    // let number = +prompt("Введите число, значение модуля которого вы хотите узнать")
     let newnumber
     if (number < 0){
         newnumber = -number
@@ -44,13 +44,14 @@ function createObject(){
         last_name: prompt("Введите фамилию студента"),
         first_name: prompt("Введите имя студента")
     }
+    console.log(`Список свойств: ${Object.keys(student)[0]}, ${Object.keys(student)[1]}, ${Object.keys(student)[2]}`)
     console.log(`Студент ${student.first_name} ${student.last_name} учится в ${student.group} группе`)
 }
 
 //Четвёртая задача
-function randomNumber(){
-    let min = +prompt("Укажите минимальное значение")
-    let max = +prompt("Укажите максимальное значение")
+function randomNumber(min, max){
+    // let min = +prompt("Укажите минимальное значение")
+    // let max = +prompt("Укажите максимальное значение")
     if (max <= min){
         console.log("Error!")
     }
