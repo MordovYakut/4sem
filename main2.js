@@ -10,13 +10,16 @@ function convertSpeed(speed, convert){
         if (convert == "toMS"){
             newspeed = speed * 1000 / 3600
             console.log(`${speed} км/ч -> ${newspeed} м/с`)
+            return newspeed
         }
         else if (convert == "toKMH"){
             newspeed = speed * 3600 / 1000
             console.log(`${speed} м/с -> ${newspeed} км/ч`)
+            return newspeed
         }
         else {
             console.log("Error!")
+            return "Error!"
         }
     }
 }
@@ -28,12 +31,15 @@ function absValue(number){
     if (number < 0){
         newnumber = -number
         console.log(`(${number}) -> ${newnumber}`)
+        return newnumber
     }
     else if (number >= 0){
         console.log(`(${number}) -> ${number}`)
+        return number
     }
     else {
         console.log("Error!")
+        return "Error!"
     }
 }
 
@@ -54,26 +60,30 @@ function randomNumber(min, max){
     // let max = +prompt("Укажите максимальное значение")
     if (max <= min){
         console.log("Error!")
+        return "Error!"
     }
     else {
         let rand = Math.floor(Math.random() * max) + min
         console.log(`(${min}, ${max}) -> ${rand}`)
+        // return `(${min}, ${max}) -> ${rand}`
+        return rand
     }
-    }
+}
 
 //Пятая задача
 function sampleArray(){
     let a = +prompt('Введите, сколько цифр будет в массиве')
-    let b = +prompt('Введите, сколько цифр должно вывести рандомно из массива')
+    // let b = +prompt('Введите, сколько цифр должно вывести рандомно из массива')
+    let b = randomNumber(0, 10)
     const massarray = []
     for (let i = 0; i < a; i++){
         massarray.push(Math.floor(Math.random() * 9) + 1)
     }
-    console.log(massarray)
     const massarray2 = []
     for (let y = 0; y < b; y++){
         let rand = (Math.floor(Math.random() * massarray.length))
         massarray2.push(massarray[rand])
     }
-    console.log(massarray2)
+    console.log(`([${massarray}], ${a}) -> [${massarray2}]`)
+    return `[${massarray2}]`
 }
